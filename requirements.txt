@@ -1,0 +1,8 @@
+datetime
+markdown2
+weasyprint
+pandas
+matplotlib
+numpy
+pathlib
+termcolor
