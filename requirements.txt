@@ -4,5 +4,4 @@ weasyprint
 pandas
 matplotlib
 numpy
-pathlib
 termcolor

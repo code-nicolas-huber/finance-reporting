@@ -10,6 +10,7 @@ from weasyprint import HTML
 import pandas as pd
 from src.functions.graphs import *
 
+
 class GenerateReport:
     
     def __init__(self, timestamp, csvPath, outputPath, outputHTML, outputPDF):
@@ -86,11 +87,13 @@ class GenerateReport:
             # Create charts
             
             barChart(total_income,total_expense,outputPath,reportName,'income-expenses')            
-            radioChart(outputPath,reportName,'radio')
+            horizontalBarChartPositive(outputPath,reportName,'income', data_list)
+            horizontalBarChartNegative(outputPath,reportName,'payments', data_list)
             
             report_file.write("\n## Charts <br>\n")
-            report_file.write(f"![Income vs. Expenses ({reportName}_income-expenses.png)]({outputPath}/{reportName}_income-expenses.png)\n")
-            report_file.write(f"![Radio Chart ({reportName}_radio.png)]({outputPath}/{reportName}_radio.png)\n")
+            report_file.write(f"![Einnahmen vs. Ausgaben ({reportName}_income-expenses.png)]({outputPath}/{reportName}_income-expenses.png)\n")
+            report_file.write(f"![Einnahmen nach Kategorie ({reportName}_income.png)]({outputPath}/{reportName}_income.png)\n")
+            report_file.write(f"![Ausgaben nach Kategorie ({reportName}_payments.png)]({outputPath}/{reportName}_payments.png)\n")
 
             report_file.write("\n## Details\n")
             report_file.write("\n### Einnahmen:\n")

@@ -1,16 +1,16 @@
 # © Nicolas Huber, 2023.
 # 11/01/2023
 
+import csv
+import os
+
 def checkCSV(path,delimiter,interface):
-    
-    import csv
-    from pathlib import Path
-    
+
     status = "success"
     message = "CSV-Datei wurde erfolgreich validiert."
     
     try:
-        if Path(path).is_file() == False or Path(path).suffix != ".csv":
+        if not os.path.isfile(path) or not path.endswith(".csv"):
             status = "error"
             message = "CSV-Datei konnte nicht gefunden werden"
         else:
@@ -18,7 +18,7 @@ def checkCSV(path,delimiter,interface):
             try:
                 with open(path, newline='') as csvfile:
                     reader = csv.reader(csvfile, delimiter=delimiter)
-                    csv_header = next(reader) 
+                    csv_header = next(reader)
                     
                     if csv_header != interface:
                         status = "error"
@@ -37,13 +37,10 @@ def checkCSV(path,delimiter,interface):
     }
     
 def checkPath(path):
-    
-    from pathlib import Path
-    
     status = "success"
     message = "Ausgabeordner wurde erfolgreich validiert"
     
-    if Path(path).is_dir() == False:
+    if not os.path.isdir(path):
         status = "error"
         message = "Ausgabeordner konnte nicht gefunden werden"
     
