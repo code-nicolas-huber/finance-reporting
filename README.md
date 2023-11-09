@@ -14,7 +14,7 @@ The source code of this website is licensed under the license linked [here](LICE
 
 ## Technical documentation
 
-The following documentation is intended for developers. Please visit [finance.nicolas-huber](https://finance.nicolas-huber.ch/pages/data/data-tools) for a detailed user-oriented documentation. Please note that this page requires a user account on the `finance.nicolas-huber` platform. You might also find an answer to your question on the public [support page](https://finance.nicolas-huber.ch/pages/system/support). 
+The following documentation is intended for developers. Please visit [finance.nicolas-huber](https://finance.nicolas-huber.ch/pages/data/data-tools) for a detailed user-oriented documentation. Please note that this page requires a user account on the `finance.nicolas-huber` platform. You might also find an answer to your question on the public [support page](https://finance.nicolas-huber.ch/pages/system/support). Keep in mind that the `finance.nicolas-huber` site is only available in German language.
 
 _DevDocs will follow soon._
 
