@@ -1,8 +1,8 @@
 # © Nicolas Huber, 2023.
-# 11/01/2023
+# 11/10/2023
 
-import csv
 import os
+import csv
 
 def checkCSV(path,delimiter,interface):
 

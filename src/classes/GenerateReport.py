@@ -1,15 +1,13 @@
 # © Nicolas Huber, 2023.
-# 11/01/2023
+# 11/10/2023
 
-import csv
-from datetime import datetime
 import os
-from collections import defaultdict
+import csv
 import markdown2
 from weasyprint import HTML
-import pandas as pd
+from datetime import datetime
 from src.functions.graphs import *
-
+from collections import defaultdict
 
 class GenerateReport:
     
@@ -32,7 +30,6 @@ class GenerateReport:
         return categoriesDict
     
     def generateMarkdownReport(self, data_list, key):
-        # Initialize variables to store analysis results
         total_income = 0
         total_expense = 0
         transaction_count = 0
@@ -52,7 +49,6 @@ class GenerateReport:
         reportName = self.timestamp + "_finance_financial-report_" + key
 
         for row in data_list:
-            # Extract relevant fields
             category = row['Kategorie']
             number = row['Transaktionsnummer']
             text = row['Buchungstext']
@@ -60,7 +56,6 @@ class GenerateReport:
             date = datetime.strptime(row['Datum'], '%d.%m.%Y')
             transactions.append((date, category, number, text, amount))
 
-            # Increment the total income or expense based on the category
             if 'ingoing' in category:
                 total_income += amount
             else:
@@ -68,11 +63,9 @@ class GenerateReport:
 
             transaction_count += 1
 
-        # Calculate average income and expense
         average_income = total_income / transaction_count
         average_expense = total_expense / transaction_count
 
-        # Create a Markdown report
         report_filename = f"{outputPath}/" + reportName + ".md"
         with open(report_filename, 'w') as report_file:
             report_file.write("# Financial Report\n")
@@ -83,8 +76,6 @@ class GenerateReport:
             report_file.write(f"Net Income (Profit): {(total_expense + total_income):.2f} <br>\n")
             report_file.write(f"Average Income: {average_income:.2f} <br>\n")
             report_file.write(f"Average Expenses: {average_expense:.2f} <br>\n")
-
-            # Create charts
             
             barChart(total_income,total_expense,outputPath,reportName,'income-expenses')            
             horizontalBarChartPositive(outputPath,reportName,'income', data_list)

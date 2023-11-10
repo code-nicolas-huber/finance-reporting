@@ -52,11 +52,11 @@ The application is structured as follows:
 
 ```txt
 finance-reporting
-|-- assets
-|-- src
-|-- |-- classes
-|-- |-- constants
-|-- |-- functions
+|-- assets/
+|-- src/
+|-- |-- classes/
+|-- |-- constants/
+|-- |-- functions/
 |-- FINANCE.py
 |-- LICENSE.md
 |-- README.md
@@ -65,7 +65,7 @@ finance-reporting
 
 ### Contributing
 
-At this time, the `finance-reporting` project is not open for community contributions. The development is currently handled exclusively by Nicolas Huber. I appreciate your interest and will update this section if the policy changes in the future. 
+At this time, the `finance-reporting` project is not open for community contributions. The development is currently handled exclusively by Nicolas Huber. Your interest is appreciated and this section will be updated if the policy changes in the future. 
 
 ### Changelog
 

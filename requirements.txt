@@ -3,5 +3,4 @@ markdown2
 weasyprint
 pandas
 matplotlib
-numpy
 termcolor

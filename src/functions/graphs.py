@@ -1,19 +1,21 @@
 # © Nicolas Huber, 2023.
-# 11/02/2023
+# 11/10/2023
 
-import numpy as np
 import pandas as pd
-import matplotlib.cm as cm
 import matplotlib.pyplot as plt
-from matplotlib.patches import ConnectionPatch
 
 def barChart(total_income, total_expense, outputPath, reportName, filename):
+    
+    plt.figure()
+    
     fig, ax = plt.subplots()
     categories = ['Income', 'Expenses']
     amounts = [total_income, total_expense]
     ax.bar(categories, amounts)
     ax.set_ylabel('Amount')
     ax.set_title('Income vs. Expenses')
+    
+    plt.tight_layout()
     plt.savefig(f"{outputPath}/{reportName}_{filename}.png")
     plt.close(fig)
     

@@ -1,14 +1,14 @@
 # © Nicolas Huber, 2023.
-# 11/01/2023
+# 11/10/2023
 
 # GENERAL
 
-version = "1.0.0"
-date = "11/01/2023"
-author = "Nicolas Huber"
-author_email = "info@nicolas-huber.ch"
-author_website = "https://nicolas-huber.ch"
-codebase = "https://github.com/code-nicolas-huber/finance-reporting-tool"
+VERSION = "1.0.0"
+DATE = "12/01/2023"
+AUTHOR = "Nicolas Huber"
+AUTHOR_EMAIL = "info@nicolas-huber.ch"
+AUTHOR_WEBSITE = "https://nicolas-huber.ch"
+CODEBASE = "https://github.com/code-nicolas-huber/finance-reporting-tool"
 
 # DATA
 

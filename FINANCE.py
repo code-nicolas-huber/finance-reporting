@@ -1,15 +1,15 @@
 # %%
 
 # © Nicolas Huber, 2023.
-# 11/01/2023
+# 11/10/2023
 
 # ---- HEADER ----
 
+import os
+from termcolor import colored
 from src.constants.CONSTANTS import *
 from src.functions.validation import *
 from src.classes.GenerateReport import *
-from termcolor import colored
-import os
 
 # ---- GLOBALS ----
 
@@ -26,15 +26,15 @@ print()
 print("Dieses Tool ergänzt die Funktionalität von finance.nicolas-huber.ch. ")
 print()
 print("Du erreichst den Autor dieses Tools mit den folgenden Angaben:")
-print(" --> Autor: " + colored(author, 'blue'))
-print(" --> E-Mail: " + colored(author_email, 'blue'))
-print(" --> Website: " + colored(author_website, 'blue'))
+print(" --> Autor: " + colored(AUTHOR, 'blue'))
+print(" --> E-Mail: " + colored(AUTHOR_EMAIL, 'blue'))
+print(" --> Website: " + colored(AUTHOR_WEBSITE, 'blue'))
 print()
 print("Wenn du dieses weiterentwickeln möchtest, findest du den Code hier:")
-print(" --> Code: " + colored(codebase, 'blue'))
+print(" --> Code: " + colored(CODEBASE, 'blue'))
 print()
 print("Du nutzt die folgende Version dieses Tools:")
-print(" --> Version: " + colored(version + " | " + date, 'blue'))
+print(" --> Version: " + colored(VERSION + " | " + DATE, 'blue'))
 
 # ---- FORMAL ----
 
@@ -166,11 +166,7 @@ generalDict = []
 for key in categoriesDict:
     print(" --> " + colored(key, 'green'))
     generalDict.append(categoriesDict[key])
-    
 print()
-
-# general reporting
-# code will follow
 
 # reporting for each category
 
