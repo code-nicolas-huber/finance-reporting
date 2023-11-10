@@ -14,7 +14,7 @@ Last updated: 11/09/2023
 
 ## 2) Basics
 
-This agreement covers the access and use of the source code for the following software, hereafter known as _finance-reporting CLI_.
+This agreement covers the access and use of the source code and any executables for the following software, hereafter known as _finance-reporting CLI_.
 
 In consideration of the above, the licensee agrees to respect the following terms and conditions. The licensee undertakes to show respect for Nicolas Huber's intellectual property and to use it only in accordance with his instructions. Thank you!
 
@@ -63,7 +63,7 @@ Any and all notifications with regard to this source code license agreement shal
 
 Licensee: --- | Software provider: Nicolas Huber, info@nicolas-huber.ch
 
-Agreement: The licensee is considered as such at the point of accessing the software (source code and application interface). Only a complete deletion of the software terminates the agreement.
+Agreement: The licensee is considered as such at the point of accessing the software (source code and executables). Only a complete deletion of the software terminates the agreement.
 
 ------
 

@@ -16,7 +16,62 @@ The source code of this website is licensed under the license linked [here](LICE
 
 The following documentation is intended for developers. Please visit [finance.nicolas-huber](https://finance.nicolas-huber.ch/pages/data/data-tools) for a detailed user-oriented documentation. Please note that this page requires a user account on the `finance.nicolas-huber` platform. You might also find an answer to your question on the public [support page](https://finance.nicolas-huber.ch/pages/system/support). Keep in mind that the `finance.nicolas-huber` site is only available in German language.
 
-_DevDocs will follow soon._
+### Introduction
+
+`finance-reporting` is a powerful tool designed to extend the functionality of the `finance.nicolas-huber` platform. It provides a command-line interface for financial data analysis, allowing individuals to process and interpret financial data more efficiently.
+
+This tool is part of the [nicolas-huber](https://github.com/code-nicolas-huber/code-nicolas-huber) software suite and is developed exclusively by Nicolas Huber. It is designed to extend `finance.nicolas-huber` but can also be extended for other applications.
+
+The `FINANCE.py` file is the main entry point of the application. It contains the core functionalities and the command-line interface for the tool. For more detailed information about the usage and architecture of the tool, please refer to the respective sections in this documentation.
+
+### Getting started
+
+#### Prerequisites
+
+In order to run this project, make sure to install Python `3.12` on your machine.
+
+#### Installation
+
+Clone this repository, enter the project directory and run `pip3 install -r requirements.txt`, which will install the project dependencies.
+
+#### Basic Usage
+
+After installing the application you can execute the file `FINANCE.py`, which is the main entry point of the application. The system dialogue is written in German Language but can be adapted if needed. 
+
+The system reads CSV tables containing transaction data and currently requires a table header of the following format:
+
+```csv
+ID;User;Konto;Kategorie;Datum;Buchungstext;Transaktionsnummer;Betrag;Währung;Status
+```
+
+You can generate reportings in Markdown, HTML and PDF format.
+
+### Architecture
+
+The application is structured as follows:
+
+```txt
+finance-reporting
+|-- assets
+|-- src
+|-- |-- classes
+|-- |-- constants
+|-- |-- functions
+|-- FINANCE.py
+|-- LICENSE.md
+|-- README.md
+|-- requirements.txt
+```
+
+### Contributing
+
+At this time, the `finance-reporting` project is not open for community contributions. The development is currently handled exclusively by Nicolas Huber. I appreciate your interest and will update this section if the policy changes in the future. 
+
+### Changelog
+
+#### [1.0.0] - 12/01/2023
+
+- Initial release of the project
 
 ---
 
