@@ -8,7 +8,7 @@ The finance-reporting tool is part of the [nicolas-huber](https://github.com/cod
 
 ## License
 
-The source code of this website is licensed under the license linked [here](LICENSE.md).
+The source code of this application is licensed under the license linked [here](LICENSE.md).
 
 ---
 
