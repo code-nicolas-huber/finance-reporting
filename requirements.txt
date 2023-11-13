@@ -4,5 +4,3 @@ weasyprint
 pandas
 matplotlib
 termcolor
-black
-pylint

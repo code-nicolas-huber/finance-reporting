@@ -3,8 +3,6 @@
 [![code-nicolas-huber - finance-reporting](https://img.shields.io/static/v1?label=code-nicolas-huber&message=finance-reporting&color=blue&logo=github)](https://github.com/code-nicolas-huber/finance-reporting "Go to GitHub repo")
 [![stars - finance-reporting](https://img.shields.io/github/stars/code-nicolas-huber/finance-reporting?style=social)](https://github.com/code-nicolas-huber/finance-reporting)
 [![forks - finance-reporting](https://img.shields.io/github/forks/code-nicolas-huber/finance-reporting?style=social)](https://github.com/code-nicolas-huber/finance-reporting)
-[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint) 
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![GitHub tag](https://img.shields.io/github/tag/code-nicolas-huber/finance-reporting?include_prereleases=&sort=semver&color=blue)](https://github.com/code-nicolas-huber/finance-reporting/releases/)
 [![issues - finance-reporting](https://img.shields.io/github/issues/code-nicolas-huber/finance-reporting)](https://github.com/code-nicolas-huber/finance-reporting/issues)
 [![License](https://img.shields.io/badge/License-INDIVIDUAL-blue)](#license)
@@ -24,6 +22,8 @@ The source code of this application is licensed under the license linked [here](
 ## Technical documentation
 
 The following documentation is intended for developers. Please visit [finance.nicolas-huber](https://finance.nicolas-huber.ch/pages/data/data-tools) for a detailed user-oriented documentation. Please note that this page requires a user account on the `finance.nicolas-huber` platform. You might also find an answer to your question on the public [support page](https://finance.nicolas-huber.ch/pages/system/support). Keep in mind that the `finance.nicolas-huber` site is only available in German language.
+
+_Please note: Proper linting and formatting are both missing in this project. Make sure to use tools like pylint and Black if you put further efforts into this project. :-) This tool serves educational purposes and thus won't be updated to professional guidelines and standards._
 
 ### Introduction
 
@@ -62,10 +62,10 @@ The application is structured as follows:
 ```txt
 finance-reporting
 |-- assets/
-|-- src/
-|-- |-- classes/
-|-- |-- constants/
-|-- |-- functions/
+| -- src/ |
+| ------- || classes/ |
+| -------- ||     | constants/ |
+| --- ||functions/
 |-- FINANCE.py
 |-- LICENSE.md
 |-- README.md
