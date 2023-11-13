@@ -1,5 +1,14 @@
 # Finance-Reporting
 
+[![code-nicolas-huber - finance-reporting](https://img.shields.io/static/v1?label=code-nicolas-huber&message=finance-reporting&color=blue&logo=github)](https://github.com/code-nicolas-huber/finance-reporting "Go to GitHub repo")
+[![stars - finance-reporting](https://img.shields.io/github/stars/code-nicolas-huber/finance-reporting?style=social)](https://github.com/code-nicolas-huber/finance-reporting)
+[![forks - finance-reporting](https://img.shields.io/github/forks/code-nicolas-huber/finance-reporting?style=social)](https://github.com/code-nicolas-huber/finance-reporting)
+[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint) 
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![GitHub tag](https://img.shields.io/github/tag/code-nicolas-huber/finance-reporting?include_prereleases=&sort=semver&color=blue)](https://github.com/code-nicolas-huber/finance-reporting/releases/)
+[![issues - finance-reporting](https://img.shields.io/github/issues/code-nicolas-huber/finance-reporting)](https://github.com/code-nicolas-huber/finance-reporting/issues)
+[![License](https://img.shields.io/badge/License-INDIVIDUAL-blue)](#license)
+
 ## Abstract
 
 The finance-reporting tool is part of the [nicolas-huber](https://github.com/code-nicolas-huber/code-nicolas-huber) software suite and extends the functionality of `finance.nicolas-huber` by enabling financial data analysis using a CLI.
