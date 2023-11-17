@@ -84,7 +84,8 @@ At this time, the `finance-reporting` project is not open for community contribu
 
 #### [1.0.1] - 11/17/2023
 
-- Minor changes
+- Fix language dialogues in CLI
+- Fix README.md formatting issues
 
 ---
 
