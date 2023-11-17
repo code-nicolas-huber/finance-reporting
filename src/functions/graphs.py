@@ -9,11 +9,11 @@ def barChart(total_income, total_expense, outputPath, reportName, filename):
     plt.figure()
     
     fig, ax = plt.subplots()
-    categories = ['Income', 'Expenses']
+    categories = ['Einnahmen', 'Ausgaben']
     amounts = [total_income, total_expense]
     ax.bar(categories, amounts)
-    ax.set_ylabel('Amount')
-    ax.set_title('Income vs. Expenses')
+    ax.set_ylabel('Betrag')
+    ax.set_title('Einnahmen vs. Ausgaben')
     
     plt.tight_layout()
     plt.savefig(f"{outputPath}/{reportName}_{filename}.png")

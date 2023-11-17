@@ -8,6 +8,7 @@ from weasyprint import HTML
 from datetime import datetime
 from src.functions.graphs import *
 from collections import defaultdict
+from src.constants.CONSTANTS import *
 
 class GenerateReport:
     
@@ -22,7 +23,7 @@ class GenerateReport:
         categoriesDict = defaultdict(list)
 
         with open(self.csvPath, 'r') as csvfile:
-            reader = csv.DictReader(csvfile, delimiter=';')
+            reader = csv.DictReader(csvfile, delimiter=CSV_DELIMITER)
 
             for row in reader:
                 categoriesDict[row['Konto']].append(row)
@@ -70,12 +71,12 @@ class GenerateReport:
         with open(report_filename, 'w') as report_file:
             report_file.write("# Financial Report\n")
             report_file.write("Dieser Report bezieht sich auf das Konto **" + key + "**. <br><br> \n")
-            report_file.write("\n## Overview <br>\n")
-            report_file.write(f"Total Income: {total_income:.2f} <br>\n")
-            report_file.write(f"Total Expenses: {total_expense:.2f} <br>\n")
-            report_file.write(f"Net Income (Profit): {(total_expense + total_income):.2f} <br>\n")
-            report_file.write(f"Average Income: {average_income:.2f} <br>\n")
-            report_file.write(f"Average Expenses: {average_expense:.2f} <br>\n")
+            report_file.write("\n## Übersicht <br>\n")
+            report_file.write(f"Gesamteinkommen: {total_income:.2f} <br>\n")
+            report_file.write(f"Gesamtausgaben: {total_expense:.2f} <br>\n")
+            report_file.write(f"Netto-Einkommen (Profit): {(total_expense + total_income):.2f} <br>\n")
+            report_file.write(f"Durchschnittliches Einkommen: {average_income:.2f} <br>\n")
+            report_file.write(f"Durchschnittliche Ausgabe: {average_expense:.2f} <br>\n")
             
             barChart(total_income,total_expense,outputPath,reportName,'income-expenses')            
             horizontalBarChartPositive(outputPath,reportName,'income', data_list)
@@ -104,12 +105,12 @@ class GenerateReport:
                         expense_categories[category] = amount
 
             for category, amount in income_categories.items():
-                report_file.write(f"- {category}: {amount:.2f} CHF\n")
+                report_file.write(f"- {category}: {amount:.2f} \n")
 
             report_file.write("\n### Ausgaben:\n")
 
             for category, amount in expense_categories.items():
-                report_file.write(f"- {category}: {amount:.2f} CHF\n")
+                report_file.write(f"- {category}: {amount:.2f} \n")
 
             report_file.write("\n## Transaktionen:\n")
             report_file.write("| Datum | Kategorie | Nummer | Buchungstext | Betrag |\n")
