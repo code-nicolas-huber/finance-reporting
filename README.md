@@ -82,6 +82,10 @@ At this time, the `finance-reporting` project is not open for community contribu
 
 - Initial release of the project
 
+#### [1.0.1] - 11/17/2023
+
+- Minor changes
+
 ---
 
 ## Support

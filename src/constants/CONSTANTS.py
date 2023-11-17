@@ -3,8 +3,8 @@
 
 # GENERAL
 
-VERSION = "1.0.0"
-DATE = "11/10/2023"
+VERSION = "1.0.1"
+DATE = "11/17/2023"
 AUTHOR = "Nicolas Huber"
 AUTHOR_EMAIL = "info@nicolas-huber.ch"
 AUTHOR_WEBSITE = "https://nicolas-huber.ch"
