@@ -62,10 +62,10 @@ The application is structured as follows:
 ```txt
 finance-reporting
 |-- assets/
-| -- src/ |
-| ------- || classes/ |
-| -------- ||     | constants/ |
-| --- ||functions/
+|-- src/
+|-- |-- classes/
+|-- |-- constants/
+|-- |-- functions/
 |-- FINANCE.py
 |-- LICENSE.md
 |-- README.md
