@@ -56,17 +56,14 @@ class GenerateReport:
             amount = float(row['Betrag'].replace(',', '').replace(' ', '').replace('CHF', ''))
             date = datetime.strptime(row['Datum'], '%d.%m.%Y')
             transactions.append((date, category, number, text, amount))
-
-            if 'ingoing' in category:
+                        
+            if amount >= 0:
                 total_income += amount
             else:
                 total_expense += amount
 
             transaction_count += 1
-
-        average_income = total_income / transaction_count
-        average_expense = total_expense / transaction_count
-
+            
         report_filename = f"{outputPath}/" + reportName + ".md"
         with open(report_filename, 'w') as report_file:
             report_file.write("# Financial Report\n")
@@ -75,8 +72,7 @@ class GenerateReport:
             report_file.write(f"Gesamteinkommen: {total_income:.2f} <br>\n")
             report_file.write(f"Gesamtausgaben: {total_expense:.2f} <br>\n")
             report_file.write(f"Netto-Einkommen (Profit): {(total_expense + total_income):.2f} <br>\n")
-            report_file.write(f"Durchschnittliches Einkommen: {average_income:.2f} <br>\n")
-            report_file.write(f"Durchschnittliche Ausgabe: {average_expense:.2f} <br>\n")
+            report_file.write(f"Anzahl Transaktionen: {transaction_count} <br>\n")
             
             barChart(total_income,total_expense,outputPath,reportName,'income-expenses')            
             horizontalBarChartPositive(outputPath,reportName,'income', data_list)

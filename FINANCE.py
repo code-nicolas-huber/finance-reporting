@@ -162,10 +162,8 @@ Generator = GenerateReport(timestampFilename, csvPath, outputPath, outputHTML, o
 
 print("Das Programm erstellt einen Bericht für die folgenden Konten:")
 categoriesDict = Generator.prepareData()
-generalDict = []
 for key in categoriesDict:
     print(" --> " + colored(key, 'green'))
-    generalDict.append(categoriesDict[key])
 print()
 
 # reporting for each category
